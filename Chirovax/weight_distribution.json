@@ -1,0 +1,23 @@
+{
+
+  "variants": [
+
+    {"pango": "B.1.351", "score": 5},
+    {"pango": "B.1.427", "score": 5},
+    {"pango": "B.1.429", "score": 5},
+    {"pango": "P.1", "score": 5},
+
+    {"pango": "B.1.525", "score": 3},
+    {"pango": "B.1.526", "score": 5},
+    {"pango": "B.1.526.1", "score": 3},
+    {"pango": "B.1.617", "score": 4},
+    {"pango": "B.1.617.1", "score": 3},
+    {"pango": "B.1.617.2", "score": 3},
+    {"pango": "B.1.617.3", "score": 3},
+    {"pango": "P.2", "score": 5}
+
+  ],
+
+  "highlighted-weightage": 0.7
+
+}
