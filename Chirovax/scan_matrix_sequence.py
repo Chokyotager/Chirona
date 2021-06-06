@@ -21,7 +21,7 @@ for i in range(1, len(data)):
 
     consensus_resiude = index[residue_probabilities.index(highest_probability)]
 
-    if consensus_resiude == "*":
+    if consensus_resiude == "-":
         skips += 1
 
     for j in range(len(residue_probabilities)):
@@ -32,10 +32,15 @@ for i in range(1, len(data)):
 
             mutated_residue = index[j]
             mutation = consensus_resiude + str(residue_number - skips) + mutated_residue
-            blosum62_value = blosum62[consensus_resiude][mutated_residue]
 
-            blosum62_original = blosum62[consensus_resiude][consensus_resiude]
-            blosum62_delta = blosum62_original - blosum62_value
+            if consensus_resiude == "-" or mutated_residue == "-":
+                blosum62_delta = 1
+
+            else:
+                blosum62_value = blosum62[consensus_resiude][mutated_residue]
+
+                blosum62_original = blosum62[consensus_resiude][consensus_resiude]
+                blosum62_delta = blosum62_original - blosum62_value
 
             mutations.append({"mutation": mutation, "probability": probability, "score": probability * blosum62_delta, "blosum62": blosum62_delta, "position": residue_number})
 

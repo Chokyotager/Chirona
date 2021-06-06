@@ -28,10 +28,6 @@ for i in range(alignment_size):
         residue = sequence[i]
         variant = sequence.description
 
-        if residue == "-":
-            # BLOSUM differences
-            residue = "*"
-
         highlighted_score = 0
 
         for j in range(len(weight_distribution["variants"])):
@@ -52,7 +48,7 @@ for i in range(alignment_size):
     highlighted.append(highlighted_probabilities)
     probabilities.append(residue_probabilities)
 
-possible_residues = list(blosum62.keys())
+possible_residues = ["-"] + list(blosum62.keys())
 datafile = [["#"] + possible_residues]
 
 for i in range(len(probabilities)):
