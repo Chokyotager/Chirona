@@ -34,7 +34,7 @@ for i in range(1, len(data)):
             mutation = consensus_resiude + str(residue_number - skips) + mutated_residue
 
             if consensus_resiude == "-" or mutated_residue == "-":
-                blosum62_delta = 1
+                blosum62_delta = 4
 
             else:
                 blosum62_value = blosum62[consensus_resiude][mutated_residue]
