@@ -1,5 +1,9 @@
 # Chirona
 
+![Relative mutation score](Relative%20significance%20score.png)
+
+**NOTE: As of 24 Jun 2021, Chriona data has identified the mutation K417N mutation present in the Delta Plus variant (Pango AY.1) with ~24 points. Since this data was taken on 23 May 2021, newer mutations can only be screened with newer data from GISAID/NCBI.**
+
 ## Overview
 
 Current SARS-Cov-2 variants and lineages are identified by PANGOLIN.
